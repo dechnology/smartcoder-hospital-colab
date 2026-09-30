@@ -1,0 +1,200 @@
+[
+  {
+    "hospital_slug": "tpmmh",
+    "passed": true,
+    "post_seconds": 10.67,
+    "coding_count": 1,
+    "region": "n",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:39:49.879649+00:00"
+  },
+  {
+    "hospital_slug": "ntuh",
+    "passed": true,
+    "post_seconds": 8.66,
+    "coding_count": 1,
+    "region": "n",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:39:58.613021+00:00"
+  },
+  {
+    "hospital_slug": "tvgh",
+    "passed": true,
+    "post_seconds": 8.84,
+    "coding_count": 1,
+    "region": "n",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:40:07.526726+00:00"
+  },
+  {
+    "hospital_slug": "tph",
+    "passed": true,
+    "post_seconds": 8.38,
+    "coding_count": 1,
+    "region": "n",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:40:15.979418+00:00"
+  },
+  {
+    "hospital_slug": "skh",
+    "passed": true,
+    "post_seconds": 8.57,
+    "coding_count": 1,
+    "region": "n",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:40:24.685000+00:00"
+  },
+  {
+    "hospital_slug": "tsgh",
+    "passed": true,
+    "post_seconds": 8.23,
+    "coding_count": 1,
+    "region": "n",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:40:32.983395+00:00"
+  },
+  {
+    "hospital_slug": "wfh",
+    "passed": true,
+    "post_seconds": 8.24,
+    "coding_count": 1,
+    "region": "n",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:40:41.312943+00:00"
+  },
+  {
+    "hospital_slug": "femh",
+    "passed": true,
+    "post_seconds": 40.24,
+    "coding_count": 1,
+    "region": "n",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:41:21.624692+00:00"
+  },
+  {
+    "hospital_slug": "ttch",
+    "passed": true,
+    "post_seconds": 8.87,
+    "coding_count": 1,
+    "region": "n",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:41:30.638770+00:00"
+  },
+  {
+    "hospital_slug": "cathay",
+    "passed": true,
+    "post_seconds": 8.91,
+    "coding_count": 1,
+    "region": "n",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:41:39.629845+00:00"
+  },
+  {
+    "hospital_slug": "cgmhlnk",
+    "passed": true,
+    "post_seconds": 8.7,
+    "coding_count": 1,
+    "region": "m",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:42:18.802522+00:00"
+  },
+  {
+    "hospital_slug": "csh",
+    "passed": true,
+    "post_seconds": 8.36,
+    "coding_count": 1,
+    "region": "m",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:42:27.263651+00:00"
+  },
+  {
+    "hospital_slug": "tcvgh",
+    "passed": true,
+    "post_seconds": 9.06,
+    "coding_count": 1,
+    "region": "m",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:42:36.410821+00:00"
+  },
+  {
+    "hospital_slug": "yuanrung",
+    "passed": true,
+    "post_seconds": 8.82,
+    "coding_count": 1,
+    "region": "m",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:42:45.319388+00:00"
+  },
+  {
+    "hospital_slug": "cmuh",
+    "passed": true,
+    "post_seconds": 10.3,
+    "coding_count": 1,
+    "region": "m",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:42:55.697012+00:00"
+  },
+  {
+    "hospital_slug": "cch",
+    "passed": true,
+    "post_seconds": 39.67,
+    "coding_count": 1,
+    "region": "m",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:43:35.454604+00:00"
+  },
+  {
+    "hospital_slug": "nckuh",
+    "passed": true,
+    "post_seconds": 10.56,
+    "coding_count": 1,
+    "region": "s",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:44:22.112358+00:00"
+  },
+  {
+    "hospital_slug": "kmuh",
+    "passed": true,
+    "post_seconds": 8.46,
+    "coding_count": 1,
+    "region": "s",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:44:30.695171+00:00"
+  },
+  {
+    "hospital_slug": "hlm",
+    "passed": true,
+    "post_seconds": 15.5,
+    "coding_count": 1,
+    "region": "s",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:44:46.274702+00:00"
+  },
+  {
+    "hospital_slug": "cmmc",
+    "passed": true,
+    "post_seconds": 8.48,
+    "coding_count": 1,
+    "region": "s",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:44:54.833082+00:00"
+  },
+  {
+    "hospital_slug": "ksvgh",
+    "passed": true,
+    "post_seconds": 8.77,
+    "coding_count": 1,
+    "region": "s",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:45:03.675682+00:00"
+  },
+  {
+    "hospital_slug": "edah",
+    "passed": true,
+    "post_seconds": 10.13,
+    "coding_count": 1,
+    "region": "s",
+    "scope": "public_https",
+    "tested_at": "2026-09-30T22:45:13.895558+00:00"
+  }
+]

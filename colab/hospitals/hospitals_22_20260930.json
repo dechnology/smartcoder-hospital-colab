@@ -15,7 +15,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:42:18.802522+00:00",
-    "post_seconds": 8.7
+    "post_seconds": 8.7,
+    "interface": {
+      "openapi_available": true,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-09-30T23:50:56.967307+00:00",
+    "function_checks": 13
   },
   {
     "name": "中山醫學大學附設醫院",
@@ -33,7 +55,30 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:42:27.263651+00:00",
-    "post_seconds": 8.36
+    "post_seconds": 8.36,
+    "interface": {
+      "openapi_available": true,
+      "stream_supported": true,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format",
+        "stream"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-09-30T23:51:23.209305+00:00",
+    "function_checks": 14
   },
   {
     "name": "台灣基督長老教會馬偕醫療財團法人馬偕紀念醫院（台北院區）",
@@ -51,7 +96,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:39:49.879649+00:00",
-    "post_seconds": 10.67
+    "post_seconds": 10.67,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-10-01T00:00:32.751386+00:00",
+    "function_checks": 13
   },
   {
     "name": "國立成功大學醫學院附設醫院",
@@ -69,7 +136,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:44:22.112358+00:00",
-    "post_seconds": 10.56
+    "post_seconds": 10.56,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-10-01T00:05:41.058987+00:00",
+    "function_checks": 13
   },
   {
     "name": "財團法人私立高雄醫學大學附設中和紀念醫院",
@@ -87,7 +176,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:44:30.695171+00:00",
-    "post_seconds": 8.46
+    "post_seconds": 8.46,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-10-01T00:05:59.417485+00:00",
+    "function_checks": 13
   },
   {
     "name": "佛教慈濟醫療財團法人花蓮慈濟醫院",
@@ -105,7 +216,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:44:46.274702+00:00",
-    "post_seconds": 15.5
+    "post_seconds": 15.5,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-10-01T00:06:48.840837+00:00",
+    "function_checks": 13
   },
   {
     "name": "奇美醫療財團法人奇美醫院",
@@ -123,7 +256,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:44:54.833082+00:00",
-    "post_seconds": 8.48
+    "post_seconds": 8.48,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-10-01T00:08:10.616940+00:00",
+    "function_checks": 13
   },
   {
     "name": "臺中榮民總醫院",
@@ -141,7 +296,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:42:36.410821+00:00",
-    "post_seconds": 9.06
+    "post_seconds": 9.06,
+    "interface": {
+      "openapi_available": true,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-09-30T23:51:40.622382+00:00",
+    "function_checks": 13
   },
   {
     "name": "國立臺灣大學醫學院附設醫院",
@@ -159,7 +336,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:39:58.613021+00:00",
-    "post_seconds": 8.66
+    "post_seconds": 8.66,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-10-01T00:00:51.911555+00:00",
+    "function_checks": 13
   },
   {
     "name": "臺北榮民總醫院",
@@ -177,7 +376,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:40:07.526726+00:00",
-    "post_seconds": 8.84
+    "post_seconds": 8.84,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-10-01T00:01:09.906557+00:00",
+    "function_checks": 13
   },
   {
     "name": "員榮醫療社團法人員榮醫院",
@@ -195,7 +416,30 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:42:45.319388+00:00",
-    "post_seconds": 8.82
+    "post_seconds": 8.82,
+    "interface": {
+      "openapi_available": true,
+      "stream_supported": true,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format",
+        "stream"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-09-30T23:52:47.259556+00:00",
+    "function_checks": 14
   },
   {
     "name": "衛生福利部臺北醫院",
@@ -213,7 +457,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:40:15.979418+00:00",
-    "post_seconds": 8.38
+    "post_seconds": 8.38,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-10-01T00:01:59.612960+00:00",
+    "function_checks": 13
   },
   {
     "name": "新光醫療財團法人新光吳火獅紀念醫院",
@@ -231,7 +497,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:40:24.685000+00:00",
-    "post_seconds": 8.57
+    "post_seconds": 8.57,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-10-01T00:02:18.556390+00:00",
+    "function_checks": 13
   },
   {
     "name": "國防醫學大學三軍總醫院",
@@ -249,7 +537,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:40:32.983395+00:00",
-    "post_seconds": 8.23
+    "post_seconds": 8.23,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-10-01T00:02:37.015672+00:00",
+    "function_checks": 13
   },
   {
     "name": "臺北市立萬芳醫院－委託臺北醫學大學辦理",
@@ -267,7 +577,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:40:41.312943+00:00",
-    "post_seconds": 8.24
+    "post_seconds": 8.24,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-10-01T00:03:26.967197+00:00",
+    "function_checks": 13
   },
   {
     "name": "高雄榮民總醫院",
@@ -285,7 +617,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:45:03.675682+00:00",
-    "post_seconds": 8.77
+    "post_seconds": 8.77,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-10-01T00:08:28.106438+00:00",
+    "function_checks": 13
   },
   {
     "name": "醫療財團法人徐元智先生醫藥基金會亞東紀念醫院",
@@ -303,7 +657,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:41:21.624692+00:00",
-    "post_seconds": 40.24
+    "post_seconds": 40.24,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-10-01T00:03:45.052779+00:00",
+    "function_checks": 13
   },
   {
     "name": "中國醫藥大學附設醫院",
@@ -321,7 +697,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:42:55.697012+00:00",
-    "post_seconds": 10.3
+    "post_seconds": 10.3,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-09-30T23:59:20.464258+00:00",
+    "function_checks": 13
   },
   {
     "name": "佛教慈濟醫療財團法人台北慈濟醫院",
@@ -339,7 +737,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:41:30.638770+00:00",
-    "post_seconds": 8.87
+    "post_seconds": 8.87,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-10-01T00:04:34.535996+00:00",
+    "function_checks": 13
   },
   {
     "name": "國泰醫療財團法人國泰綜合醫院",
@@ -357,7 +777,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:41:39.629845+00:00",
-    "post_seconds": 8.91
+    "post_seconds": 8.91,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-10-01T00:04:52.294093+00:00",
+    "function_checks": 13
   },
   {
     "name": "義大醫療財團法人義大醫院",
@@ -375,7 +817,29 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:45:13.895558+00:00",
-    "post_seconds": 10.13
+    "post_seconds": 10.13,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-10-01T00:10:25.905895+00:00",
+    "function_checks": 13
   },
   {
     "name": "彰化基督教醫療財團法人彰化基督教醫院",
@@ -393,6 +857,28 @@
     "api_key_state": "present",
     "public_contract_passed": true,
     "public_tested_at": "2026-09-30T22:43:35.454604+00:00",
-    "post_seconds": 39.67
+    "post_seconds": 39.67,
+    "interface": {
+      "openapi_available": false,
+      "stream_supported": false,
+      "request_fields": [
+        "request_id",
+        "encounter_type",
+        "language",
+        "SOAP",
+        "tui",
+        "raw_clinical_note",
+        "icd_codes",
+        "output_format"
+      ],
+      "output_formats": [
+        "simple",
+        "fhir"
+      ],
+      "checked_at": "2026-10-01"
+    },
+    "function_contract_passed": true,
+    "function_tested_at": "2026-09-30T23:59:37.380298+00:00",
+    "function_checks": 13
   }
 ]

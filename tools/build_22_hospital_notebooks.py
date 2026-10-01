@@ -24,7 +24,7 @@ def colab_url(slug):
 def build():
     hospitals=json.loads(REGISTRY.read_text())
     client=(ROOT/'tools/colab_client.py').read_text()
-    table=['| # | 醫院／院別代碼 | 分區 | 新版逐項測試 | Colab 測試手冊 |','|---|---|---|---|---|']
+    table=['| # | 醫院／院別代碼 | 分區 | 最新逐項重測 | 執行位置 | Colab 測試手冊 |','|---|---|---|---|---|---|']
     for number,h in enumerate(hospitals,1):
         slug=h['slug'];base=h['base_url'];features=h['interface'];stream=features['stream_supported']
         cells=[]
@@ -321,8 +321,14 @@ print("已移除金鑰變數並關閉連線。需要再測試時，請重跑初�
         filename=slug+'_smartcoder_api.ipynb'
         notebook={'cells':cells,'metadata':{'colab':{'name':filename,'provenance':[],'toc_visible':True},'kernelspec':{'display_name':'Python 3','name':'python3'},'language_info':{'name':'python'}},'nbformat':4,'nbformat_minor':5}
         (ROOT/'colab/hospitals'/filename).write_text(json.dumps(notebook,ensure_ascii=False,indent=2)+'\n')
-        tested = f'{h["function_checks"]}/{h["function_checks"]} 通過' if h.get('function_contract_passed') is True else '待驗證'
-        table.append(f'| {number} | {h["name"]} `{slug}` | {h["region"]} | {tested} | [開啟]({colab_url(slug)}) |')
+        if h.get('function_contract_passed') is True:
+            tested = f'{h["function_checks"]}/{h["function_checks"]} 通過'
+        elif h.get('function_contract_passed') is False:
+            tested = f'{h["function_passed_checks"]}/{h["function_checks"]}；未通過'
+        else:
+            tested = '待驗證'
+        execution_client = {'operator_mac_public_https':'Mac → 公開 HTTPS','formal_vm_public_https':'正式 VM → 公開 HTTPS'}.get(h.get('function_test_client'), '正式 VM → 公開 HTTPS')
+        table.append(f'| {number} | {h["name"]} `{slug}` | {h["region"]} | {tested} | {execution_client} | [開啟]({colab_url(slug)}) |')
     readme='''# SmartCoder 22 院 API 介接與 Colab 測試手冊
 
 供院方資訊室與 HIS 介接工程師使用。依院別開啟下表 Colab，先執行初始化與隱藏金鑰設定，再按各功能區塊的 ▶。也可選 Python 3／CPU →「執行階段 → 全部執行」。不需要 GPU。
@@ -330,6 +336,12 @@ print("已移除金鑰變數並關閉連線。需要再測試時，請重跑初�
 每本手冊包含參數表、POST／GET 呼叫程式、實際 HTTP 狀態與 JSON 顯示、FHIR 輸出、401／404／422 錯誤測試、Colab Origin 的 CORS 預檢，以及本次逐項測試總表。中山醫與員榮另有 NDJSON 串流測試；其餘院別不提供未支援的 stream 開關。各院 API 根網址固定於自己的 notebook。
 
 金鑰由計畫窗口以私有管道提供；公開 notebook 沒有內建金鑰，也沒有儲存任何執行輸出。預設使用合成病例，請勿在本公開 Colab 輸入真實病歷或個資。自訂病例可驗證 API 格式；其編碼正確性須由專業人員覆核。
+
+## 最新重測狀態（2026-10-01）
+
+北、南區從 Mac 取用已發布 notebook 的程式進行完整逐項重測，16 院中 9 院通過、7 院未通過；部分 POST 在約 60–62 秒後連線中斷。中區六院在正式 VM 重測通過，尚不能當成中區外部完整驗收。下表標示每院的實際執行位置與結果。
+
+Mac 與 Google Colab 執行階段均完成 22/22 院的健康、預檢及無金鑰回應檢查；Google 帶金鑰完整編碼尚未執行。斷線原因仍在定位，目前不宣稱全部可供外部完整使用。詳見 [本次重測紀錄](../../verification/external_clients_22_20261001.json)。
 
 ## 院別連結
 
@@ -351,7 +363,7 @@ n＝北區、m＝中區、s＝南區。`hlm` 為花蓮慈濟、`cmmc` 為奇美�
     evidence=ROOT/'verification/functions_22_20261001.json'
     if evidence.exists():
         report=json.loads(evidence.read_text())
-        readme += f'\n新版預設逐項測試：{report["passed"]}/{report["hospital_count"]} 院、共 {report["function_checks"]} 項通過。實際 notebook 程式在正式 VM 執行，連至各院公開 HTTPS 入口；此紀錄不宣稱全部已在 Google Colab 執行階段跑過，也不代表任意參數組合或臨床準確率已驗證。逐項 HTTP 與時間見 [驗證紀錄](../../verification/functions_22_20261001.json)。\n'
+        readme += f'\n歷史批次紀錄：先前正式 VM 的逐項測試為 {report["passed"]}/{report["hospital_count"]} 院、共 {report["function_checks"]} 項通過。該紀錄保留實際日期與執行位置，已由上方最新重測更新目前狀態，不能替代目前的外部完整驗收，也不代表任意參數組合或臨床準確率已驗證。逐項 HTTP 與時間見 [歷史驗證紀錄](../../verification/functions_22_20261001.json)。\n'
     (ROOT/'colab/hospitals/README_22_HOSPITALS_20260930.md').write_text(readme)
     (ROOT/'README.md').write_text(readme.replace('(hospitals_22_20260930.json)','(colab/hospitals/hospitals_22_20260930.json)').replace('(../../verification/','(verification/'))
     print('Generated',len(hospitals),'hospital API manuals')

@@ -36,8 +36,11 @@
       "checked_at": "2026-10-01"
     },
     "function_contract_passed": true,
-    "function_tested_at": "2026-09-30T23:50:56.967307+00:00",
-    "function_checks": 13
+    "function_tested_at": "2026-10-01T03:17:50.153728+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 13,
+    "function_test_client": "formal_vm_public_https",
+    "current_function_status": "本次逐項重測通過"
   },
   {
     "name": "中山醫學大學附設醫院",
@@ -77,8 +80,11 @@
       "checked_at": "2026-10-01"
     },
     "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:46:53.727128+00:00",
-    "function_checks": 14
+    "function_tested_at": "2026-10-01T03:19:11.728837+00:00",
+    "function_checks": 14,
+    "function_passed_checks": 14,
+    "function_test_client": "formal_vm_public_https",
+    "current_function_status": "本次逐項重測通過"
   },
   {
     "name": "台灣基督長老教會馬偕醫療財團法人馬偕紀念醫院（台北院區）",
@@ -117,8 +123,11 @@
       "checked_at": "2026-10-01"
     },
     "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:00:32.751386+00:00",
-    "function_checks": 13
+    "function_tested_at": "2026-10-01T03:14:49.944438+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 13,
+    "function_test_client": "operator_mac_public_https",
+    "current_function_status": "本次逐項重測通過"
   },
   {
     "name": "國立成功大學醫學院附設醫院",
@@ -157,8 +166,11 @@
       "checked_at": "2026-10-01"
     },
     "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:05:41.058987+00:00",
-    "function_checks": 13
+    "function_tested_at": "2026-10-01T03:14:52.384087+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 13,
+    "function_test_client": "operator_mac_public_https",
+    "current_function_status": "本次逐項重測通過"
   },
   {
     "name": "財團法人私立高雄醫學大學附設中和紀念醫院",
@@ -197,8 +209,11 @@
       "checked_at": "2026-10-01"
     },
     "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:05:59.417485+00:00",
-    "function_checks": 13
+    "function_tested_at": "2026-10-01T03:15:51.013616+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 13,
+    "function_test_client": "operator_mac_public_https",
+    "current_function_status": "本次逐項重測通過"
   },
   {
     "name": "佛教慈濟醫療財團法人花蓮慈濟醫院",
@@ -236,9 +251,12 @@
       ],
       "checked_at": "2026-10-01"
     },
-    "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:06:48.840837+00:00",
-    "function_checks": 13
+    "function_contract_passed": false,
+    "function_tested_at": "2026-10-01T03:17:53.669445+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 11,
+    "function_test_client": "operator_mac_public_https",
+    "current_function_status": "本次外部逐項重測未通過；原因仍在定位"
   },
   {
     "name": "奇美醫療財團法人奇美醫院",
@@ -276,9 +294,12 @@
       ],
       "checked_at": "2026-10-01"
     },
-    "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:08:10.616940+00:00",
-    "function_checks": 13
+    "function_contract_passed": false,
+    "function_tested_at": "2026-10-01T03:19:45.019098+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 12,
+    "function_test_client": "operator_mac_public_https",
+    "current_function_status": "本次外部逐項重測未通過；原因仍在定位"
   },
   {
     "name": "臺中榮民總醫院",
@@ -317,8 +338,11 @@
       "checked_at": "2026-10-01"
     },
     "function_contract_passed": true,
-    "function_tested_at": "2026-09-30T23:51:40.622382+00:00",
-    "function_checks": 13
+    "function_tested_at": "2026-10-01T03:21:04.034692+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 13,
+    "function_test_client": "formal_vm_public_https",
+    "current_function_status": "本次逐項重測通過"
   },
   {
     "name": "國立臺灣大學醫學院附設醫院",
@@ -357,8 +381,11 @@
       "checked_at": "2026-10-01"
     },
     "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:00:51.911555+00:00",
-    "function_checks": 13
+    "function_tested_at": "2026-10-01T03:15:48.009365+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 13,
+    "function_test_client": "operator_mac_public_https",
+    "current_function_status": "本次逐項重測通過"
   },
   {
     "name": "臺北榮民總醫院",
@@ -396,9 +423,12 @@
       ],
       "checked_at": "2026-10-01"
     },
-    "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:01:09.906557+00:00",
-    "function_checks": 13
+    "function_contract_passed": false,
+    "function_tested_at": "2026-10-01T03:17:06.702422+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 12,
+    "function_test_client": "operator_mac_public_https",
+    "current_function_status": "本次外部逐項重測未通過；原因仍在定位"
   },
   {
     "name": "員榮醫療社團法人員榮醫院",
@@ -438,8 +468,11 @@
       "checked_at": "2026-10-01"
     },
     "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:48:56.345263+00:00",
-    "function_checks": 14
+    "function_tested_at": "2026-10-01T03:23:18.107676+00:00",
+    "function_checks": 14,
+    "function_passed_checks": 14,
+    "function_test_client": "formal_vm_public_https",
+    "current_function_status": "本次逐項重測通過"
   },
   {
     "name": "衛生福利部臺北醫院",
@@ -478,8 +511,11 @@
       "checked_at": "2026-10-01"
     },
     "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:01:59.612960+00:00",
-    "function_checks": 13
+    "function_tested_at": "2026-10-01T03:18:37.691973+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 13,
+    "function_test_client": "operator_mac_public_https",
+    "current_function_status": "本次逐項重測通過"
   },
   {
     "name": "新光醫療財團法人新光吳火獅紀念醫院",
@@ -517,9 +553,12 @@
       ],
       "checked_at": "2026-10-01"
     },
-    "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:02:18.556390+00:00",
-    "function_checks": 13
+    "function_contract_passed": false,
+    "function_tested_at": "2026-10-01T03:20:48.908179+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 10,
+    "function_test_client": "operator_mac_public_https",
+    "current_function_status": "本次外部逐項重測未通過；原因仍在定位"
   },
   {
     "name": "國防醫學大學三軍總醫院",
@@ -557,9 +596,12 @@
       ],
       "checked_at": "2026-10-01"
     },
-    "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:02:37.015672+00:00",
-    "function_checks": 13
+    "function_contract_passed": false,
+    "function_tested_at": "2026-10-01T03:23:00.180770+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 10,
+    "function_test_client": "operator_mac_public_https",
+    "current_function_status": "本次外部逐項重測未通過；原因仍在定位"
   },
   {
     "name": "臺北市立萬芳醫院－委託臺北醫學大學辦理",
@@ -598,8 +640,11 @@
       "checked_at": "2026-10-01"
     },
     "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:03:26.967197+00:00",
-    "function_checks": 13
+    "function_tested_at": "2026-10-01T03:24:32.395636+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 13,
+    "function_test_client": "operator_mac_public_https",
+    "current_function_status": "本次逐項重測通過"
   },
   {
     "name": "高雄榮民總醫院",
@@ -637,9 +682,12 @@
       ],
       "checked_at": "2026-10-01"
     },
-    "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:08:28.106438+00:00",
-    "function_checks": 13
+    "function_contract_passed": false,
+    "function_tested_at": "2026-10-01T03:21:35.599460+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 12,
+    "function_test_client": "operator_mac_public_https",
+    "current_function_status": "本次外部逐項重測未通過；原因仍在定位"
   },
   {
     "name": "醫療財團法人徐元智先生醫藥基金會亞東紀念醫院",
@@ -678,8 +726,11 @@
       "checked_at": "2026-10-01"
     },
     "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:03:45.052779+00:00",
-    "function_checks": 13
+    "function_tested_at": "2026-10-01T03:25:30.573548+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 13,
+    "function_test_client": "operator_mac_public_https",
+    "current_function_status": "本次逐項重測通過"
   },
   {
     "name": "中國醫藥大學附設醫院",
@@ -718,8 +769,11 @@
       "checked_at": "2026-10-01"
     },
     "function_contract_passed": true,
-    "function_tested_at": "2026-09-30T23:59:20.464258+00:00",
-    "function_checks": 13
+    "function_tested_at": "2026-10-01T03:24:39.622699+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 13,
+    "function_test_client": "formal_vm_public_https",
+    "current_function_status": "本次逐項重測通過"
   },
   {
     "name": "佛教慈濟醫療財團法人台北慈濟醫院",
@@ -758,8 +812,11 @@
       "checked_at": "2026-10-01"
     },
     "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:04:34.535996+00:00",
-    "function_checks": 13
+    "function_tested_at": "2026-10-01T03:26:32.275340+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 13,
+    "function_test_client": "operator_mac_public_https",
+    "current_function_status": "本次逐項重測通過"
   },
   {
     "name": "國泰醫療財團法人國泰綜合醫院",
@@ -798,8 +855,11 @@
       "checked_at": "2026-10-01"
     },
     "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:04:52.294093+00:00",
-    "function_checks": 13
+    "function_tested_at": "2026-10-01T03:27:00.231605+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 13,
+    "function_test_client": "operator_mac_public_https",
+    "current_function_status": "本次逐項重測通過"
   },
   {
     "name": "義大醫療財團法人義大醫院",
@@ -837,9 +897,12 @@
       ],
       "checked_at": "2026-10-01"
     },
-    "function_contract_passed": true,
-    "function_tested_at": "2026-10-01T00:10:25.905895+00:00",
-    "function_checks": 13
+    "function_contract_passed": false,
+    "function_tested_at": "2026-10-01T03:23:39.465578+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 11,
+    "function_test_client": "operator_mac_public_https",
+    "current_function_status": "本次外部逐項重測未通過；原因仍在定位"
   },
   {
     "name": "彰化基督教醫療財團法人彰化基督教醫院",
@@ -878,7 +941,10 @@
       "checked_at": "2026-10-01"
     },
     "function_contract_passed": true,
-    "function_tested_at": "2026-09-30T23:59:37.380298+00:00",
-    "function_checks": 13
+    "function_tested_at": "2026-10-01T03:25:30.375048+00:00",
+    "function_checks": 13,
+    "function_passed_checks": 13,
+    "function_test_client": "formal_vm_public_https",
+    "current_function_status": "本次逐項重測通過"
   }
 ]

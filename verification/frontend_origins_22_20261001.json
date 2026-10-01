@@ -1,0 +1,3323 @@
+{
+  "created_at_utc": "2026-10-01T09:06:46.236675+00:00",
+  "frontend_commit": "39d48b6ba5fbbaba0de672bf9ce4b45c25372ef4",
+  "frontend_changed": false,
+  "scope": "22 hospital own formal frontend Origin plus existing Colab only",
+  "tested": 22,
+  "passed_hospitals": 22,
+  "passed_checks": 396,
+  "total_checks": 396,
+  "test_client": "original_vm_public_https_with_formal_frontend_origin",
+  "browser_probe": {
+    "hospital": "tpmmh",
+    "origin": "https://tpmmh.mohw-smart.itri-nlp.tw",
+    "client": "actual_in_app_browser",
+    "credential": "invalid_test_token_only",
+    "get_http": 401,
+    "error_body_readable": true,
+    "cors_passed": true,
+    "recorded_at_utc": "2026-10-01T08:50:33+00:00",
+    "authenticated_coding_in_browser": false
+  },
+  "published_csh_colab_regression": {
+    "hospital": "csh",
+    "mode": "default",
+    "sha256": "10be01b02199a50b68d951b188f2bfbb6dcc340f11d5661d1827b3db09c915ef",
+    "expected_checks": 14,
+    "checks": 14,
+    "passed_checks": 14,
+    "failures": [],
+    "passed": true,
+    "utc": "2026-10-01T08:59:40.010321+00:00"
+  },
+  "historical_tpmmh_401_credential_source": "not_confirmed",
+  "existing_external_60_second_disconnect_issue": "not_resolved_by_this_cors_test",
+  "test_harness_corrections": [
+    "Public OpenAPI 404 is an expected configuration on 18 hospitals.",
+    "NDJSON event discriminator is type; final results verified after correcting the harness."
+  ],
+  "hospitals": [
+    {
+      "hospital": "cgmhlnk",
+      "base_url": "https://smartcoderm.itri-nlp.tw/cgmhlnk",
+      "origin": "https://cgmhlnk.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:51:34.394997+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://cgmhlnk.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://cgmhlnk.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://cgmhlnk.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://cgmhlnk.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://cgmhlnk.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://cgmhlnk.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 200,
+          "allow_origin": "https://cgmhlnk.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://cgmhlnk.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "3f0f3863-5c82-4512-9f32-f7a26fb212c4",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://cgmhlnk.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "3f0f3863-5c82-4512-9f32-f7a26fb212c4"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": true,
+      "request_id": "3f0f3863-5c82-4512-9f32-f7a26fb212c4",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 9.542
+    },
+    {
+      "hospital": "csh",
+      "base_url": "https://smartcoderm.itri-nlp.tw/csh",
+      "origin": "https://csh.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:54:33.137708+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://csh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://csh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://csh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://csh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://csh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://csh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 200,
+          "allow_origin": "https://csh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://csh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "437c2174-ea5e-436c-9eb0-b3aaf9b5c0c4",
+          "mode": "NDJSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://csh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "437c2174-ea5e-436c-9eb0-b3aaf9b5c0c4"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": true,
+      "stream_event_count": 42,
+      "pipeline_completed": true,
+      "request_id": "437c2174-ea5e-436c-9eb0-b3aaf9b5c0c4",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 10.965
+    },
+    {
+      "hospital": "tpmmh",
+      "base_url": "https://smartcodern.itri-nlp.tw/tpmmh",
+      "origin": "https://tpmmh.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:51:32.844599+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://tpmmh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://tpmmh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://tpmmh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://tpmmh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://tpmmh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://tpmmh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://tpmmh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://tpmmh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "750134f9-42f2-41c5-a53c-591a1c3810be",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://tpmmh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "750134f9-42f2-41c5-a53c-591a1c3810be"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "750134f9-42f2-41c5-a53c-591a1c3810be",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 10.401
+    },
+    {
+      "hospital": "nckuh",
+      "base_url": "https://smartcoders.itri-nlp.tw/nckuh",
+      "origin": "https://nckuh.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:51:59.967871+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://nckuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://nckuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://nckuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://nckuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://nckuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://nckuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://nckuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://nckuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "0605e0d8-37c1-4ea5-9956-57afa731c6b2",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://nckuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "0605e0d8-37c1-4ea5-9956-57afa731c6b2"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "0605e0d8-37c1-4ea5-9956-57afa731c6b2",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 19.191
+    },
+    {
+      "hospital": "kmuh",
+      "base_url": "https://smartcoders.itri-nlp.tw/kmuh",
+      "origin": "https://kmuh.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:51:59.968275+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://kmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://kmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://kmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://kmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://kmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://kmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://kmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://kmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "9feda3a2-2806-40d4-b993-8917a180380b",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://kmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "9feda3a2-2806-40d4-b993-8917a180380b"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "9feda3a2-2806-40d4-b993-8917a180380b",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 9.772
+    },
+    {
+      "hospital": "hlm",
+      "base_url": "https://smartcoders.itri-nlp.tw/hlm",
+      "origin": "https://hlm.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:52:09.742143+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://hlm.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://hlm.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://hlm.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://hlm.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://hlm.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://hlm.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://hlm.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://hlm.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "5fcbeb4e-88cc-4aa2-9577-23e95f4d8872",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://hlm.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "5fcbeb4e-88cc-4aa2-9577-23e95f4d8872"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "5fcbeb4e-88cc-4aa2-9577-23e95f4d8872",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 18.476
+    },
+    {
+      "hospital": "cmmc",
+      "base_url": "https://smartcoders.itri-nlp.tw/cmmc",
+      "origin": "https://cmmc.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:52:19.160198+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://cmmc.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://cmmc.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://cmmc.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://cmmc.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://cmmc.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://cmmc.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://cmmc.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://cmmc.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "d2d7ce35-4ba4-4891-b229-a0e7914e790c",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://cmmc.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "d2d7ce35-4ba4-4891-b229-a0e7914e790c"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "d2d7ce35-4ba4-4891-b229-a0e7914e790c",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 18.093
+    },
+    {
+      "hospital": "tcvgh",
+      "base_url": "https://smartcoderm.itri-nlp.tw/tcvgh",
+      "origin": "https://tcvgh.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:51:43.938428+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://tcvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://tcvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://tcvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://tcvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://tcvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://tcvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 200,
+          "allow_origin": "https://tcvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://tcvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "856ec024-fc82-4ebd-baff-c40397da5b5a",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://tcvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "856ec024-fc82-4ebd-baff-c40397da5b5a"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": true,
+      "request_id": "856ec024-fc82-4ebd-baff-c40397da5b5a",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 9.243
+    },
+    {
+      "hospital": "ntuh",
+      "base_url": "https://smartcodern.itri-nlp.tw/ntuh",
+      "origin": "https://ntuh.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:51:32.844969+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://ntuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://ntuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://ntuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://ntuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://ntuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://ntuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://ntuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://ntuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "1695ce19-033e-4576-b25e-42df65135a50",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://ntuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "1695ce19-033e-4576-b25e-42df65135a50"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "1695ce19-033e-4576-b25e-42df65135a50",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 10.551
+    },
+    {
+      "hospital": "tvgh",
+      "base_url": "https://smartcodern.itri-nlp.tw/tvgh",
+      "origin": "https://tvgh.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:51:43.246294+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://tvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://tvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://tvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://tvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://tvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://tvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://tvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://tvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "0612f329-d205-4ace-bf0d-4e60370a8c11",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://tvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "0612f329-d205-4ace-bf0d-4e60370a8c11"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "0612f329-d205-4ace-bf0d-4e60370a8c11",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 9.692
+    },
+    {
+      "hospital": "yuanrung",
+      "base_url": "https://smartcoderm.itri-nlp.tw/yuanrung",
+      "origin": "https://yuanrung.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:54:33.138245+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://yuanrung.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://yuanrung.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://yuanrung.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://yuanrung.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://yuanrung.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://yuanrung.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 200,
+          "allow_origin": "https://yuanrung.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://yuanrung.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "0ac7a6d4-3e91-43a7-adbf-bdd23caa8543",
+          "mode": "NDJSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://yuanrung.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "0ac7a6d4-3e91-43a7-adbf-bdd23caa8543"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": true,
+      "stream_event_count": 42,
+      "pipeline_completed": true,
+      "request_id": "0ac7a6d4-3e91-43a7-adbf-bdd23caa8543",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 10.867
+    },
+    {
+      "hospital": "tph",
+      "base_url": "https://smartcodern.itri-nlp.tw/tph",
+      "origin": "https://tph.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:51:43.396574+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://tph.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://tph.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://tph.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://tph.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://tph.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://tph.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://tph.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://tph.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "993a9656-3a74-40a6-9cc5-de1526d5e2e0",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://tph.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "993a9656-3a74-40a6-9cc5-de1526d5e2e0"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "993a9656-3a74-40a6-9cc5-de1526d5e2e0",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 9.681
+    },
+    {
+      "hospital": "skh",
+      "base_url": "https://smartcodern.itri-nlp.tw/skh",
+      "origin": "https://skh.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:51:52.939478+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://skh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://skh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://skh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://skh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://skh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://skh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://skh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://skh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "471b01d4-9db4-4233-bb77-22ab6c445eae",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://skh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "471b01d4-9db4-4233-bb77-22ab6c445eae"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "471b01d4-9db4-4233-bb77-22ab6c445eae",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 9.618
+    },
+    {
+      "hospital": "tsgh",
+      "base_url": "https://smartcodern.itri-nlp.tw/tsgh",
+      "origin": "https://tsgh.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:51:53.078904+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://tsgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://tsgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://tsgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://tsgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://tsgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://tsgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://tsgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://tsgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "8f03e9ee-c284-4386-b89d-ac9c7715178d",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://tsgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "8f03e9ee-c284-4386-b89d-ac9c7715178d"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "8f03e9ee-c284-4386-b89d-ac9c7715178d",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 17.446
+    },
+    {
+      "hospital": "wfh",
+      "base_url": "https://smartcodern.itri-nlp.tw/wfh",
+      "origin": "https://wfh.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:52:02.558613+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://wfh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://wfh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://wfh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://wfh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://wfh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://wfh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://wfh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://wfh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "397f3ea5-c426-48ef-b698-ab4f88564295",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://wfh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "397f3ea5-c426-48ef-b698-ab4f88564295"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "397f3ea5-c426-48ef-b698-ab4f88564295",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 16.524
+    },
+    {
+      "hospital": "ksvgh",
+      "base_url": "https://smartcoders.itri-nlp.tw/ksvgh",
+      "origin": "https://ksvgh.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:52:28.219254+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://ksvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://ksvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://ksvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://ksvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://ksvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://ksvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://ksvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://ksvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "be3aa5ba-35fd-45b7-b861-4280b6a96322",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://ksvgh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "be3aa5ba-35fd-45b7-b861-4280b6a96322"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "be3aa5ba-35fd-45b7-b861-4280b6a96322",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 9.22
+    },
+    {
+      "hospital": "femh",
+      "base_url": "https://smartcodern.itri-nlp.tw/femh",
+      "origin": "https://femh.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:52:10.526309+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://femh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://femh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://femh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://femh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://femh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://femh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://femh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://femh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "87890081-847e-4bbe-b832-ff39ad3d9558",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://femh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "87890081-847e-4bbe-b832-ff39ad3d9558"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "87890081-847e-4bbe-b832-ff39ad3d9558",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 17.453
+    },
+    {
+      "hospital": "cmuh",
+      "base_url": "https://smartcoderm.itri-nlp.tw/cmuh",
+      "origin": "https://cmuh.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:51:53.182379+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://cmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://cmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://cmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://cmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://cmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://cmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://cmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://cmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "7be84d02-f8ef-40f2-9acf-280163c478d2",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://cmuh.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "7be84d02-f8ef-40f2-9acf-280163c478d2"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "7be84d02-f8ef-40f2-9acf-280163c478d2",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 9.583
+    },
+    {
+      "hospital": "ttch",
+      "base_url": "https://smartcodern.itri-nlp.tw/ttch",
+      "origin": "https://ttch.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:52:19.083061+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://ttch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://ttch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://ttch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://ttch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://ttch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://ttch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://ttch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://ttch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "f4f76c94-0d9b-4192-b8be-403251e6c0a1",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://ttch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "f4f76c94-0d9b-4192-b8be-403251e6c0a1"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "f4f76c94-0d9b-4192-b8be-403251e6c0a1",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 17.23
+    },
+    {
+      "hospital": "cathay",
+      "base_url": "https://smartcodern.itri-nlp.tw/cathay",
+      "origin": "https://cathay.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:52:27.980631+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://cathay.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://cathay.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://cathay.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://cathay.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://cathay.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://cathay.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://cathay.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://cathay.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "cfb28739-a2af-47b2-9acd-62543513fb74",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://cathay.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "cfb28739-a2af-47b2-9acd-62543513fb74"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "cfb28739-a2af-47b2-9acd-62543513fb74",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 17.81
+    },
+    {
+      "hospital": "edah",
+      "base_url": "https://smartcoders.itri-nlp.tw/edah",
+      "origin": "https://edah.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:52:37.253951+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://edah.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://edah.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://edah.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://edah.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://edah.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://edah.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://edah.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://edah.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "529d2c9e-117f-462e-aea6-0b0d7adf9558",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://edah.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "529d2c9e-117f-462e-aea6-0b0d7adf9558"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "529d2c9e-117f-462e-aea6-0b0d7adf9558",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 9.426
+    },
+    {
+      "hospital": "cch",
+      "base_url": "https://smartcoderm.itri-nlp.tw/cch",
+      "origin": "https://cch.mohw-smart.itri-nlp.tw",
+      "utc": "2026-10-01T08:51:57.383086+00:00",
+      "tls_verification_enabled": true,
+      "client": "original_vm_public_https",
+      "checks": [
+        {
+          "name": "own_frontend_post_preflight",
+          "http": 204,
+          "allow_origin": "https://cch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_get_preflight",
+          "http": 204,
+          "allow_origin": "https://cch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://cch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://cch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "own_frontend_original_key_404",
+          "http": 404,
+          "allow_origin": "https://cch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_post_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_get_preflight",
+          "http": 204,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_missing_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_invalid_key_401",
+          "http": 401,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "colab_original_key_404",
+          "http": 404,
+          "allow_origin": "https://colab.research.google.com",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "unknown_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_preflight_denied",
+          "http": 204,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "other_hospital_origin_response_denied",
+          "http": 401,
+          "allow_origin": null,
+          "origin_header_count": 0,
+          "passed": true
+        },
+        {
+          "name": "health",
+          "http": 200,
+          "allow_origin": "https://cch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "public_openapi_response_cors",
+          "http": 404,
+          "allow_origin": "https://cch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true
+        },
+        {
+          "name": "coding",
+          "http": 200,
+          "allow_origin": "https://cch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "3ee222da-eb24-4c2a-a12d-8edd612bf582",
+          "mode": "JSON"
+        },
+        {
+          "name": "completed_results",
+          "http": 200,
+          "allow_origin": "https://cch.mohw-smart.itri-nlp.tw",
+          "origin_header_count": 1,
+          "passed": true,
+          "request_id": "3ee222da-eb24-4c2a-a12d-8edd612bf582"
+        }
+      ],
+      "api_key_state": "present",
+      "public_openapi_available": false,
+      "request_id": "3ee222da-eb24-4c2a-a12d-8edd612bf582",
+      "coding_count": 1,
+      "results_completed": true,
+      "results_equal": true,
+      "department_accepted": true,
+      "threshold_accepted": true,
+      "passed": true,
+      "seconds": 13.849
+    }
+  ]
+}

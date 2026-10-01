@@ -8,6 +8,14 @@
 
 ## 最新重測狀態（2026-10-01）
 
+### 正式院方前端 CORS 已修正
+
+22 院已允許各院自己的 `https://<代碼>.mohw-smart.itri-nlp.tw`，並保留 Colab。先前 Nginx 固定回 Colab Origin，會使院方前端即使遇到 API 200 也被瀏覽器阻擋；本次已改為院別路徑配對精確來源。
+
+各自正式 VM→公開 HTTPS，送正式院方 Origin，以原院別金鑰完成 22/22 院、396/396 項檢查，包含 POST 200、GET completed 與完整結果一致、預檢、認證錯誤及拒絕來源。中山／員榮保留 NDJSON，其餘二十院為 JSON；台北馬偕原機台金鑰本次也完成 200。實際瀏覽器另確認台北馬偕正式頁面可讀假金鑰 GET 401；沒有宣稱完成 22 院瀏覽器帶金鑰的 HIS 互動驗收。
+
+[逐院正式 Origin 與結果](docs/FRONTEND_CORS_22_20261001.md)／[JSON 紀錄](verification/frontend_origins_22_20261001.json)。既有外部約 60 秒斷線紀錄保留，不能由這次 CORS 通過推論其根因已修復。
+
 ### 新增保留參數
 
 22 院的編碼 POST 已接受選填 `department`（string）與 `threshold`（number）；可省略或傳 null。兩者目前不參與編碼、投票或篩選。各院 Colab 第 3 節已加入表單；`threshold` 留白不送出，填入數值時轉為 JSON number。
@@ -59,7 +67,7 @@ n＝北區、m＝中區、s＝南區。`hlm` 為花蓮慈濟、`cmmc` 為奇美�
 
 中山醫、員榮、林口長庚、臺中榮總已公開需金鑰的 `/openapi.json`；其餘院別此路徑預期 404。各手冊依實際配置檢查，404 不等於編碼功能故障。管理／稽核路徑及內部回呼不屬於此院方介接手冊。
 
-預設合成病例檢查胸痛概念 29857009、否認咳嗽、整理後文字、3 輪 NER metadata、TXT_NER 來源、FHIR 對應及 POST／GET 完整 JSON 一致。CORS 驗證 Origin 為 https://colab.research.google.com；院方自己的 Origin 仍需另外驗證。測試通過不等於臨床準確率或院方整合驗收。
+預設合成病例檢查胸痛概念 29857009、否認咳嗽、整理後文字、3 輪 NER metadata、TXT_NER 來源、FHIR 對應及 POST／GET 完整 JSON 一致。Notebook 自己的 CORS 測項使用 https://colab.research.google.com；上方另列 22 院正式前端 Origin 的修復與驗證。測試通過不等於臨床準確率或院方 HIS 整合驗收。
 
 逐院介面配置與測試日期見 [院別登錄表](colab/hospitals/hospitals_22_20260930.json)。Notebook 自己的總表只代表當次實際執行結果。
 

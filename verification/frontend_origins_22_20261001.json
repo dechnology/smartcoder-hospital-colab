@@ -1,5 +1,5 @@
 {
-  "created_at_utc": "2026-10-01T09:06:46.236675+00:00",
+  "created_at_utc": "2026-10-01T09:24:09.820844+00:00",
   "frontend_commit": "39d48b6ba5fbbaba0de672bf9ce4b45c25372ef4",
   "frontend_changed": false,
   "scope": "22 hospital own formal frontend Origin plus existing Colab only",
@@ -30,12 +30,27 @@
     "passed": true,
     "utc": "2026-10-01T08:59:40.010321+00:00"
   },
-  "historical_tpmmh_401_credential_source": "not_confirmed",
+  "historical_tpmmh_401_credential_source": "operator_provided_private_txt_matches_current_vm; original_request_header_unobserved",
   "existing_external_60_second_disconnect_issue": "not_resolved_by_this_cors_test",
   "test_harness_corrections": [
     "Public OpenAPI 404 is an expected configuration on 18 hospitals.",
     "NDJSON event discriminator is type; final results verified after correcting the harness."
   ],
+  "tpmmh_private_key_source_verification": {
+    "hospital": "tpmmh",
+    "private_file_mode": "0600",
+    "private_file_key_state": "present",
+    "file_api_base_matches_formal": true,
+    "original_vm_key_state": "present",
+    "private_file_matches_original_vm": true,
+    "public_key_auth_http": 404,
+    "public_auth_passed": true,
+    "anonymous_http": 401,
+    "formal_origin_cors_passed": true,
+    "tls_verification_enabled": true,
+    "historical_401_root_cause_confirmed": false,
+    "recorded_at_utc": "2026-10-01T09:24:09.799811+00:00"
+  },
   "hospitals": [
     {
       "hospital": "cgmhlnk",

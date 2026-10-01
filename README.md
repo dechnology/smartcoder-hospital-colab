@@ -28,6 +28,8 @@ Mac 與 Google Colab 執行階段均完成 22/22 院的健康、預檢及無金�
 
 ## 院別連結
 
+**本次院方清單共有 22 本，完整 Colab 連結見下表。** 公開目錄另保留 `cgh`、`mmh`、`ucc` 三份既有檔案，未包含在這次 22 院驗收清單，因此目錄共有 25 個 notebook 檔案。台北馬偕請選 `tpmmh`，國泰請選 `cathay`；依下表院別代碼開啟對應手冊。
+
 ### 員榮 ICD 對照修復（2026-10-01）
 
 員榮後端查詢參數已修正。新版手冊新增 ICD-10-CM E11.9 → SNOMED 44054006 測項，正式 VM→公開 HTTPS 15/15 項通過。帶 ICD 的 POST 先回 202，程式會回查到 completed；對照項目缺少模型 confidence 時，不填入推估分數。院方仍使用 icd_codes 內的 code／system。其他院別的 OMOP 接入不能由此推論；OMOP CDM 匯出不在此測項範圍。[員榮驗證紀錄](verification/yuanrung_icd_acceptance_20261001.json)。

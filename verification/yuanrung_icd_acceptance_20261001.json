@@ -1,0 +1,15 @@
+{
+  "hospital": "yuanrung",
+  "public_base": "https://smartcoderm.itri-nlp.tw/yuanrung",
+  "client": "formal_vm_public_https",
+  "tested_at_utc": "2026-10-01T06:23:09.751991+00:00",
+  "checks": 15,
+  "passed_checks": 15,
+  "icd_mapping_passed": true,
+  "synthetic_icd": "E11.9",
+  "expected_snomed": "44054006",
+  "icd_nonstream_behavior": "202 initial response then same-request results completed",
+  "credential_included": false,
+  "patient_data_included": false,
+  "scope": "YuanRung ICD-10 to SNOMED; no all-hospital OMOP or CDM export claim"
+}

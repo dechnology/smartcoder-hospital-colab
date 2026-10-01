@@ -69,7 +69,8 @@ def result_contract(payload, request_id, body=None):
     seen = set()
     for item in codings:
         require(isinstance(item, dict), "編碼項目必須是 object")
-        require(CODING_FIELDS <= set(item) <= CODING_FIELDS | {"category", "tui", "code_name"}, "編碼項目欄位不符合現行 OpenAPI")
+        required_coding = CODING_FIELDS - {"confidence"} if HOSPITAL_SLUG == "yuanrung" else CODING_FIELDS
+        require(required_coding <= set(item) <= CODING_FIELDS | {"category", "tui", "code_name"}, "編碼項目欄位不符合現行 OpenAPI")
         concept_id = item["concept_id"]
         require(isinstance(concept_id, str) and concept_id.isdigit(), "concept_id 必須是數字字串")
         require(concept_id not in seen, "concept_id 重複")
@@ -78,9 +79,9 @@ def result_contract(payload, request_id, body=None):
         require(not fixture or concept_id in KNOWN_SNOMED_FIXTURE, "回傳概念不在此合成測試的已知 SNOMED CT 集合")
         seen.add(concept_id)
         require(isinstance(item["term"], str) and bool(item["term"].strip()), "term 為空或型別不符")
-        confidence = item["confidence"]
+        confidence = item["confidence"] if "confidence" in item else None
         if confidence is None:
-            require("ICD10_CROSSWALK" in item["source"], "只有 ICD 對照項目可缺少投票支持度")
+            require((HOSPITAL_SLUG == "yuanrung" and (not known_body or bool(body.get("icd_codes")))) or "ICD10_CROSSWALK" in item["source"], "只有 ICD 對照項目可缺少投票支持度")
         else:
             require(type(confidence) in (int, float) and math.isfinite(confidence) and 0 < confidence <= 1, "confidence 型別或範圍錯誤")
         require(isinstance(item["source"], list) and bool(item["source"]), "source 必須是非空 array")
@@ -207,7 +208,9 @@ def checked(response, expected, name, *, check_cors=True):
 def public_view(value):
     # The API field remains in memory for validation; the displayed identifier is masked.
     if isinstance(value, dict):
-        return {k: ("external AI capacity" if k == "polish_model" else public_view(v)) for k, v in value.items()}
+        return {k: ("external AI capacity" if k == "polish_model" else
+                    [s if s in ("TXT_NER", "ICD10_CROSSWALK") else "terminology mapping" for s in v] if k == "source" and isinstance(v, list) else
+                    public_view(v)) for k, v in value.items()}
     if isinstance(value, list):
         return [public_view(v) for v in value]
     return value
@@ -242,6 +245,33 @@ def preflight(path, method, name):
 
 def remember(body, payload):
     COMPLETED[body["request_id"]] = {"body": body, "response": payload}
+
+
+def completed_coding_response(response, request_id, body, name):
+    expected = (200, 202) if HOSPITAL_SLUG == "yuanrung" and body.get("icd_codes") else 200
+    checked(response, expected, name)
+    if response.status_code == 200:
+        return response.json()
+    partial = response.json()
+    require(set(partial) == {"request_id", "status", "snomed_codings", "result_is_final"}, "202 初步結果欄位不符")
+    require(partial["request_id"] == request_id and partial["status"] == "processing" and partial["result_is_final"] is False, "202 尚未完成結果不符")
+    require(isinstance(partial["snomed_codings"], list), "初步對照必須是 array")
+    print("HTTP 202：已接受；正在等待文字分析完成，初步對照不是最終結果。")
+    deadline = time.monotonic() + 240
+    while time.monotonic() < deadline:
+        saved = request("GET", "/api/v1/snomed/results/" + request_id)
+        http(saved, 200, saved.request.url, name)
+        cors(saved)
+        payload = saved.json()
+        require(isinstance(payload, dict) and set(payload) == GET_FIELDS, "GET 任務欄位不符")
+        require(payload["request_id"] == request_id, "GET 任務 ID 不符")
+        if payload["status"] == "completed":
+            get_contract(payload, request_id, body=body)
+            TESTS[name]["HTTP"] = "202 → 200"
+            return payload["response"]
+        require(payload["status"] == "running" and payload["status_code"] == 202, "本案分析失敗或狀態不符，請保留 request_id 聯絡維運")
+        time.sleep(1)
+    raise ValueError("本案仍未完成，請以相同 request_id 回查；不要重複送出")
 
 
 def lookup_completed(request_id, name):

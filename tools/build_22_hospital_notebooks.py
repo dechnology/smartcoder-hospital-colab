@@ -49,7 +49,7 @@ def build():
 |---|---|---|---|---|
 | 1 | `GET /healthz` | 確認服務可連線 | 200 | 不需要 |
 | 2 | `GET /openapi.json` | 查詢本院介面 schema | {'200' if features['openapi_available'] else '404（此院未公開此路徑）'} | 需要 |
-| 3 | `POST /api/v1/snomed/coding` | 原始文字 → 整理 → SNOMED CT 編碼 | 200 | 需要 |
+| 3 | `POST /api/v1/snomed/coding` | 原始文字 → 整理 → SNOMED CT 編碼 | {'200；帶 ICD 時先回 202' if slug == 'yuanrung' else '200'} | 需要 |
 | 4 | `GET /api/v1/snomed/results/{{request_id}}` | 以同一 ID 取得完整結果 | 200 | 需要 |
 | 5 | 同一 POST，`output_format="fhir"` | 查看 FHIR 格式內容 | 200 | 需要 |
 ''' + ('''| 6 | 同一 POST，`stream=true` | 逐行讀取 NDJSON 進度與最終結果 | 200 | 需要 |
@@ -154,12 +154,11 @@ with test_case(name):
         require(isinstance(coding_body["icd_codes"], list), "icd_codes 必須是 JSON array")
     require(set(coding_body) <= set(REQUEST_FIELDS), "請求包含本院不支援的欄位")
     coding_response = request("POST", "/api/v1/snomed/coding", body=coding_body)
-    checked(coding_response, 200, name)
-    POST_RESULT = coding_response.json()
+    POST_RESULT = completed_coding_response(coding_response, request_id, coding_body, name)
     result_contract(POST_RESULT, request_id, coding_body)
     remember(coding_body, POST_RESULT)
     LAST_REQUEST_ID = request_id
-    show_json(coding_response)
+    display(JSON(public_view(POST_RESULT), expanded=True))
     print("回查用 request_id：", LAST_REQUEST_ID)
 ''','coding',True)
         md('''## 4. GET／回查編碼結果
@@ -182,7 +181,8 @@ with test_case(name):
 lookup_request_id = "" #@param {type:"string"}
 name = "GET 結果回查"
 with test_case(name):
-    selected_id = lookup_request_id.strip() or LAST_REQUEST_ID
+    selected_id = lookup_request_id.strip() or globals().get("LAST_REQUEST_ID")
+    require(bool(selected_id), "請先完成 POST 編碼，或填入已有的 request_id")
     require(str(UUID(selected_id)) == selected_id, "request_id 必須是 UUID")
     GET_RESULT = lookup_completed(selected_id, name)
 ''','lookup',True)
@@ -205,6 +205,26 @@ with test_case(name):
     show_json(fhir_response)
     FHIR_GET_RESULT = lookup_completed(fhir_id, name)
 ''','fhir')
+        if slug == 'yuanrung':
+            md('''## 5a. POST／ICD-10 對照與結果回查
+
+員榮已提供 ICD-10-CM 對照。此測項同時送出合成文字與 `icd_codes=[{"system":"ICD-10-CM","code":"E11.9"}]`，確認預期 SNOMED `44054006` 與完整文字分析。院方仍使用 `code`／`system` 欄位。
+
+**HTTP 202 是初步結果**：程式會使用同一 `request_id` 回查，等待 `completed` 後才判定通過。對照項目沒有模型投票支持度時，`confidence` 可能為空或省略；不要填入推估分數。這項已知對照不代表所有 ICD 均有結果，也不代表 OMOP CDM 匯出。
+''')
+            code('''name = "ICD-10 對照與結果回查"
+with test_case(name):
+    icd_id = str(uuid4())
+    icd_body = {"request_id": icd_id, "raw_clinical_note": RAW_NOTE, "output_format": "simple",
+                "icd_codes": [{"system": "ICD-10-CM", "code": "E11.9"}]}
+    icd_response = request("POST", "/api/v1/snomed/coding", body=icd_body)
+    ICD_RESULT = completed_coding_response(icd_response, icd_id, icd_body, name)
+    result_contract(ICD_RESULT, icd_id, icd_body)
+    require(any(row["concept_id"] == "44054006" and row["source"] != ["TXT_NER"] for row in ICD_RESULT["snomed_codings"]), "未取得 E11.9 的預期 SNOMED 對照來源")
+    remember(icd_body, ICD_RESULT)
+    display(JSON(public_view(ICD_RESULT), expanded=True))
+    ICD_GET_RESULT = lookup_completed(icd_id, name)
+''','icd_mapping')
         if stream:
             md('''## 6. POST／串流進度與最終結果
 
@@ -312,7 +332,7 @@ saved.raise_for_status()
 清除目前記憶體中的連線、金鑰與 API 結果。分享 notebook 前，另選「編輯 → 清除所有輸出」，或以原始公開連結提供給其他人。''')
         code('''API_KEY = ""
 COMPLETED.clear()
-for variable_name in ["POST_RESULT", "GET_RESULT", "FHIR_RESULT", "FHIR_GET_RESULT", "STREAM_RESULT", "STREAM_GET_RESULT", "coding_response", "fhir_response", "stream_response", "schema_response", "error_response", "event", "original", "payload"]:
+for variable_name in ["POST_RESULT", "GET_RESULT", "FHIR_RESULT", "FHIR_GET_RESULT", "STREAM_RESULT", "STREAM_GET_RESULT", "ICD_RESULT", "ICD_GET_RESULT", "LAST_REQUEST_ID", "coding_response", "icd_response", "fhir_response", "stream_response", "schema_response", "error_response", "event", "original", "payload"]:
     globals().pop(variable_name, None)
 SESSION.close()
 print("已移除金鑰變數並關閉連線。需要再測試時，請重跑初始化及金鑰設定。")
@@ -344,6 +364,12 @@ print("已移除金鑰變數並關閉連線。需要再測試時，請重跑初�
 Mac 與 Google Colab 執行階段均完成 22/22 院的健康、預檢及無金鑰回應檢查；Google 帶金鑰完整編碼尚未執行。斷線原因仍在定位，目前不宣稱全部可供外部完整使用。詳見 [本次重測紀錄](../../verification/external_clients_22_20261001.json)。
 
 ## 院別連結
+
+### 員榮 ICD 對照修復（2026-10-01）
+
+員榮後端查詢參數已修正。新版手冊新增 ICD-10-CM E11.9 → SNOMED 44054006 測項，正式 VM→公開 HTTPS 15/15 項通過。帶 ICD 的 POST 先回 202，程式會回查到 completed；對照項目缺少模型 confidence 時，不填入推估分數。院方仍使用 icd_codes 內的 code／system。其他院別的 OMOP 接入不能由此推論；OMOP CDM 匯出不在此測項範圍。[員榮驗證紀錄](../../verification/yuanrung_icd_acceptance_20261001.json)。
+
+先前外部未通過的七院，在各自正式 VM→公開 HTTPS 的後續重測共 91/91 項通過。外部 Mac／Google 完整編碼的斷線仍未完成定位，下表保留原外部結果，沒有改標全部通過。
 
 '''+'\n'.join(table)+'''
 

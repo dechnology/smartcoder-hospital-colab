@@ -14,6 +14,12 @@ Mac 與 Google Colab 執行階段均完成 22/22 院的健康、預檢及無金�
 
 ## 院別連結
 
+### 員榮 ICD 對照修復（2026-10-01）
+
+員榮後端查詢參數已修正。新版手冊新增 ICD-10-CM E11.9 → SNOMED 44054006 測項，正式 VM→公開 HTTPS 15/15 項通過。帶 ICD 的 POST 先回 202，程式會回查到 completed；對照項目缺少模型 confidence 時，不填入推估分數。院方仍使用 icd_codes 內的 code／system。其他院別的 OMOP 接入不能由此推論；OMOP CDM 匯出不在此測項範圍。[員榮驗證紀錄](../../verification/yuanrung_icd_acceptance_20261001.json)。
+
+先前外部未通過的七院，在各自正式 VM→公開 HTTPS 的後續重測共 91/91 項通過。外部 Mac／Google 完整編碼的斷線仍未完成定位，下表保留原外部結果，沒有改標全部通過。
+
 | # | 醫院／院別代碼 | 分區 | 最新逐項重測 | 執行位置 | Colab 測試手冊 |
 |---|---|---|---|---|---|
 | 1 | 林口長庚紀念醫院 `cgmhlnk` | m | 13/13 通過 | 正式 VM → 公開 HTTPS | [開啟](https://colab.research.google.com/github/dechnology/smartcoder-hospital-colab/blob/main/colab/hospitals/cgmhlnk_smartcoder_api.ipynb) |
@@ -26,7 +32,7 @@ Mac 與 Google Colab 執行階段均完成 22/22 院的健康、預檢及無金�
 | 8 | 臺中榮民總醫院 `tcvgh` | m | 13/13 通過 | 正式 VM → 公開 HTTPS | [開啟](https://colab.research.google.com/github/dechnology/smartcoder-hospital-colab/blob/main/colab/hospitals/tcvgh_smartcoder_api.ipynb) |
 | 9 | 國立臺灣大學醫學院附設醫院 `ntuh` | n | 13/13 通過 | Mac → 公開 HTTPS | [開啟](https://colab.research.google.com/github/dechnology/smartcoder-hospital-colab/blob/main/colab/hospitals/ntuh_smartcoder_api.ipynb) |
 | 10 | 臺北榮民總醫院 `tvgh` | n | 12/13；未通過 | Mac → 公開 HTTPS | [開啟](https://colab.research.google.com/github/dechnology/smartcoder-hospital-colab/blob/main/colab/hospitals/tvgh_smartcoder_api.ipynb) |
-| 11 | 員榮醫療社團法人員榮醫院 `yuanrung` | m | 14/14 通過 | 正式 VM → 公開 HTTPS | [開啟](https://colab.research.google.com/github/dechnology/smartcoder-hospital-colab/blob/main/colab/hospitals/yuanrung_smartcoder_api.ipynb) |
+| 11 | 員榮醫療社團法人員榮醫院 `yuanrung` | m | 15/15 通過 | 正式 VM → 公開 HTTPS | [開啟](https://colab.research.google.com/github/dechnology/smartcoder-hospital-colab/blob/main/colab/hospitals/yuanrung_smartcoder_api.ipynb) |
 | 12 | 衛生福利部臺北醫院 `tph` | n | 13/13 通過 | Mac → 公開 HTTPS | [開啟](https://colab.research.google.com/github/dechnology/smartcoder-hospital-colab/blob/main/colab/hospitals/tph_smartcoder_api.ipynb) |
 | 13 | 新光醫療財團法人新光吳火獅紀念醫院 `skh` | n | 10/13；未通過 | Mac → 公開 HTTPS | [開啟](https://colab.research.google.com/github/dechnology/smartcoder-hospital-colab/blob/main/colab/hospitals/skh_smartcoder_api.ipynb) |
 | 14 | 國防醫學大學三軍總醫院 `tsgh` | n | 10/13；未通過 | Mac → 公開 HTTPS | [開啟](https://colab.research.google.com/github/dechnology/smartcoder-hospital-colab/blob/main/colab/hospitals/tsgh_smartcoder_api.ipynb) |

@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-01T00:11:06.365671+00:00",
+  "checked_at": "2026-10-01T00:52:56.398075+00:00",
   "scope": "generated_notebook_cells_against_public_https_from_formal_hospital_vms",
   "cases": "default_synthetic_simple_fhir_stream_if_supported_auth_errors_parameter_errors_colab_origin",
   "google_colab_runtime_executed": false,
@@ -98,14 +98,15 @@
     {
       "hospital_slug": "csh",
       "passed": true,
+      "scope": "published_notebook_function_cells_public_https",
       "function_checks": 14,
-      "tested_at": "2026-09-30T23:51:23.209305+00:00",
+      "independent_get_checked": true,
       "checks": [
         {
           "項目": "健康檢查",
           "結果": "通過",
           "HTTP": 200,
-          "秒數": 0.05
+          "秒數": 0.12
         },
         {
           "項目": "OpenAPI 公開範圍",
@@ -117,7 +118,7 @@
           "項目": "POST 編碼",
           "結果": "通過",
           "HTTP": 200,
-          "秒數": 8.56
+          "秒數": 10.35
         },
         {
           "項目": "GET 結果回查",
@@ -129,13 +130,13 @@
           "項目": "FHIR 輸出與回查",
           "結果": "通過",
           "HTTP": 200,
-          "秒數": 8.22
+          "秒數": 9.39
         },
         {
           "項目": "串流與最終結果回查",
           "結果": "通過",
           "HTTP": 200,
-          "秒數": 9.34
+          "秒數": 9.91
         },
         {
           "項目": "POST 無金鑰",
@@ -159,7 +160,7 @@
           "項目": "查無 request_id",
           "結果": "通過",
           "HTTP": 404,
-          "秒數": 0.0
+          "秒數": 0.01
         },
         {
           "項目": "不支援的欄位",
@@ -186,6 +187,8 @@
           "秒數": 0.0
         }
       ],
+      "tested_at": "2026-10-01T00:46:53.727128+00:00",
+      "published_sha256": "71cc3120eaa2ad0e54d4361b89585bbcd648f29096fb568ff0a6ccdd30506035",
       "notebook_sha256": "71cc3120eaa2ad0e54d4361b89585bbcd648f29096fb568ff0a6ccdd30506035"
     },
     {
@@ -888,13 +891,13 @@
       "hospital_slug": "yuanrung",
       "passed": true,
       "function_checks": 14,
-      "tested_at": "2026-09-30T23:52:47.259556+00:00",
+      "tested_at": "2026-10-01T00:48:56.345263+00:00",
       "checks": [
         {
           "項目": "健康檢查",
           "結果": "通過",
           "HTTP": 200,
-          "秒數": 0.04
+          "秒數": 0.09
         },
         {
           "項目": "OpenAPI 公開範圍",
@@ -906,7 +909,7 @@
           "項目": "POST 編碼",
           "結果": "通過",
           "HTTP": 200,
-          "秒數": 39.64
+          "秒數": 8.23
         },
         {
           "項目": "GET 結果回查",
@@ -918,13 +921,13 @@
           "項目": "FHIR 輸出與回查",
           "結果": "通過",
           "HTTP": 200,
-          "秒數": 17.36
+          "秒數": 8.77
         },
         {
           "項目": "串流與最終結果回查",
           "結果": "通過",
           "HTTP": 200,
-          "秒數": 9.52
+          "秒數": 8.32
         },
         {
           "項目": "POST 無金鑰",
@@ -948,7 +951,7 @@
           "項目": "查無 request_id",
           "結果": "通過",
           "HTTP": 404,
-          "秒數": 0.0
+          "秒數": 0.01
         },
         {
           "項目": "不支援的欄位",

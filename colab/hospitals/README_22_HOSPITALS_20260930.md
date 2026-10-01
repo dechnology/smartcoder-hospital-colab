@@ -8,6 +8,12 @@
 
 ## 最新重測狀態（2026-10-01）
 
+### 新增保留參數
+
+22 院的編碼 POST 已接受選填 `department`（string）與 `threshold`（number）；可省略或傳 null。兩者目前不參與編碼、投票或篩選。各院 Colab 第 3 節已加入表單；`threshold` 留白不送出，填入數值時轉為 JSON number。
+
+22/22 院已由各自正式 VM→公開 HTTPS 驗證新欄位編碼、結果回查與 CORS；CSH 與員榮的新版 Colab 分別通過 14/14、15/15 項。此輪測試的來源是正式 VM。[新參數驗證紀錄](../../verification/reserved_parameters_20261001.json)。
+
 北、南區從 Mac 取用已發布 notebook 的程式進行完整逐項重測，16 院中 9 院通過、7 院未通過；部分 POST 在約 60–62 秒後連線中斷。中區六院在正式 VM 重測通過，尚不能當成中區外部完整驗收。下表標示每院的實際執行位置與結果。
 
 Mac 與 Google Colab 執行階段均完成 22/22 院的健康、預檢及無金鑰回應檢查；Google 帶金鑰完整編碼尚未執行。斷線原因仍在定位，目前不宣稱全部可供外部完整使用。詳見 [本次重測紀錄](../../verification/external_clients_22_20261001.json)。

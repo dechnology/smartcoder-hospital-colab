@@ -27,20 +27,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": true,
     "function_tested_at": "2026-10-01T03:17:50.153728+00:00",
     "function_checks": 13,
     "function_passed_checks": 13,
     "function_test_client": "formal_vm_public_https",
-    "current_function_status": "本次逐項重測通過"
+    "current_function_status": "本次逐項重測通過",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:00:27.834672+00:00"
   },
   {
     "name": "中山醫學大學附設醫院",
@@ -71,20 +79,28 @@
         "raw_clinical_note",
         "icd_codes",
         "output_format",
-        "stream"
+        "stream",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": true,
     "function_tested_at": "2026-10-01T03:19:11.728837+00:00",
     "function_checks": 14,
     "function_passed_checks": 14,
     "function_test_client": "formal_vm_public_https",
-    "current_function_status": "本次逐項重測通過"
+    "current_function_status": "本次逐項重測通過",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:00:36.731660+00:00"
   },
   {
     "name": "台灣基督長老教會馬偕醫療財團法人馬偕紀念醫院（台北院區）",
@@ -114,20 +130,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": true,
     "function_tested_at": "2026-10-01T03:14:49.944438+00:00",
     "function_checks": 13,
     "function_passed_checks": 13,
     "function_test_client": "operator_mac_public_https",
-    "current_function_status": "本次逐項重測通過"
+    "current_function_status": "本次逐項重測通過",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:03:11.543811+00:00"
   },
   {
     "name": "國立成功大學醫學院附設醫院",
@@ -157,20 +181,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": true,
     "function_tested_at": "2026-10-01T03:14:52.384087+00:00",
     "function_checks": 13,
     "function_passed_checks": 13,
     "function_test_client": "operator_mac_public_https",
-    "current_function_status": "本次逐項重測通過"
+    "current_function_status": "本次逐項重測通過",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:04:45.375952+00:00"
   },
   {
     "name": "財團法人私立高雄醫學大學附設中和紀念醫院",
@@ -200,20 +232,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": true,
     "function_tested_at": "2026-10-01T03:15:51.013616+00:00",
     "function_checks": 13,
     "function_passed_checks": 13,
     "function_test_client": "operator_mac_public_https",
-    "current_function_status": "本次逐項重測通過"
+    "current_function_status": "本次逐項重測通過",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:04:37.040875+00:00"
   },
   {
     "name": "佛教慈濟醫療財團法人花蓮慈濟醫院",
@@ -243,20 +283,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": false,
     "function_tested_at": "2026-10-01T03:17:53.669445+00:00",
     "function_checks": 13,
     "function_passed_checks": 11,
     "function_test_client": "operator_mac_public_https",
-    "current_function_status": "本次外部逐項重測未通過；原因仍在定位"
+    "current_function_status": "本次外部逐項重測未通過；原因仍在定位",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:03:58.124663+00:00"
   },
   {
     "name": "奇美醫療財團法人奇美醫院",
@@ -286,20 +334,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": false,
     "function_tested_at": "2026-10-01T03:19:45.019098+00:00",
     "function_checks": 13,
     "function_passed_checks": 12,
     "function_test_client": "operator_mac_public_https",
-    "current_function_status": "本次外部逐項重測未通過；原因仍在定位"
+    "current_function_status": "本次外部逐項重測未通過；原因仍在定位",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:04:28.807811+00:00"
   },
   {
     "name": "臺中榮民總醫院",
@@ -329,20 +385,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": true,
     "function_tested_at": "2026-10-01T03:21:04.034692+00:00",
     "function_checks": 13,
     "function_passed_checks": 13,
     "function_test_client": "formal_vm_public_https",
-    "current_function_status": "本次逐項重測通過"
+    "current_function_status": "本次逐項重測通過",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:00:09.099864+00:00"
   },
   {
     "name": "國立臺灣大學醫學院附設醫院",
@@ -372,20 +436,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": true,
     "function_tested_at": "2026-10-01T03:15:48.009365+00:00",
     "function_checks": 13,
     "function_passed_checks": 13,
     "function_test_client": "operator_mac_public_https",
-    "current_function_status": "本次逐項重測通過"
+    "current_function_status": "本次逐項重測通過",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:02:52.782235+00:00"
   },
   {
     "name": "臺北榮民總醫院",
@@ -415,20 +487,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": false,
     "function_tested_at": "2026-10-01T03:17:06.702422+00:00",
     "function_checks": 13,
     "function_passed_checks": 12,
     "function_test_client": "operator_mac_public_https",
-    "current_function_status": "本次外部逐項重測未通過；原因仍在定位"
+    "current_function_status": "本次外部逐項重測未通過；原因仍在定位",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:03:03.182466+00:00"
   },
   {
     "name": "員榮醫療社團法人員榮醫院",
@@ -459,13 +539,19 @@
         "raw_clinical_note",
         "icd_codes",
         "output_format",
-        "stream"
+        "stream",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": true,
     "function_tested_at": "2026-10-01T06:23:09.751991+00:00",
@@ -474,7 +560,9 @@
     "function_test_client": "formal_vm_public_https",
     "current_function_status": "本次逐項重測通過",
     "icd_mapping_contract_passed": true,
-    "icd_mapping_tested_at": "2026-10-01T06:23:09.751991+00:00"
+    "icd_mapping_tested_at": "2026-10-01T06:23:09.751991+00:00",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T06:59:48.620607+00:00"
   },
   {
     "name": "衛生福利部臺北醫院",
@@ -504,20 +592,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": true,
     "function_tested_at": "2026-10-01T03:18:37.691973+00:00",
     "function_checks": 13,
     "function_passed_checks": 13,
     "function_test_client": "operator_mac_public_https",
-    "current_function_status": "本次逐項重測通過"
+    "current_function_status": "本次逐項重測通過",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:03:01.464062+00:00"
   },
   {
     "name": "新光醫療財團法人新光吳火獅紀念醫院",
@@ -547,20 +643,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": false,
     "function_tested_at": "2026-10-01T03:20:48.908179+00:00",
     "function_checks": 13,
     "function_passed_checks": 10,
     "function_test_client": "operator_mac_public_https",
-    "current_function_status": "本次外部逐項重測未通過；原因仍在定位"
+    "current_function_status": "本次外部逐項重測未通過；原因仍在定位",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:02:43.778632+00:00"
   },
   {
     "name": "國防醫學大學三軍總醫院",
@@ -590,20 +694,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": false,
     "function_tested_at": "2026-10-01T03:23:00.180770+00:00",
     "function_checks": 13,
     "function_passed_checks": 10,
     "function_test_client": "operator_mac_public_https",
-    "current_function_status": "本次外部逐項重測未通過；原因仍在定位"
+    "current_function_status": "本次外部逐項重測未通過；原因仍在定位",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:02:35.024779+00:00"
   },
   {
     "name": "臺北市立萬芳醫院－委託臺北醫學大學辦理",
@@ -633,20 +745,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": true,
     "function_tested_at": "2026-10-01T03:24:32.395636+00:00",
     "function_checks": 13,
     "function_passed_checks": 13,
     "function_test_client": "operator_mac_public_https",
-    "current_function_status": "本次逐項重測通過"
+    "current_function_status": "本次逐項重測通過",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:02:25.630141+00:00"
   },
   {
     "name": "高雄榮民總醫院",
@@ -676,20 +796,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": false,
     "function_tested_at": "2026-10-01T03:21:35.599460+00:00",
     "function_checks": 13,
     "function_passed_checks": 12,
     "function_test_client": "operator_mac_public_https",
-    "current_function_status": "本次外部逐項重測未通過；原因仍在定位"
+    "current_function_status": "本次外部逐項重測未通過；原因仍在定位",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:03:48.255570+00:00"
   },
   {
     "name": "醫療財團法人徐元智先生醫藥基金會亞東紀念醫院",
@@ -719,20 +847,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": true,
     "function_tested_at": "2026-10-01T03:25:30.573548+00:00",
     "function_checks": 13,
     "function_passed_checks": 13,
     "function_test_client": "operator_mac_public_https",
-    "current_function_status": "本次逐項重測通過"
+    "current_function_status": "本次逐項重測通過",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:02:16.841481+00:00"
   },
   {
     "name": "中國醫藥大學附設醫院",
@@ -762,20 +898,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": true,
     "function_tested_at": "2026-10-01T03:24:39.622699+00:00",
     "function_checks": 13,
     "function_passed_checks": 13,
     "function_test_client": "formal_vm_public_https",
-    "current_function_status": "本次逐項重測通過"
+    "current_function_status": "本次逐項重測通過",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:00:00.380308+00:00"
   },
   {
     "name": "佛教慈濟醫療財團法人台北慈濟醫院",
@@ -805,20 +949,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": true,
     "function_tested_at": "2026-10-01T03:26:32.275340+00:00",
     "function_checks": 13,
     "function_passed_checks": 13,
     "function_test_client": "operator_mac_public_https",
-    "current_function_status": "本次逐項重測通過"
+    "current_function_status": "本次逐項重測通過",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:02:07.749893+00:00"
   },
   {
     "name": "國泰醫療財團法人國泰綜合醫院",
@@ -848,20 +1000,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": true,
     "function_tested_at": "2026-10-01T03:27:00.231605+00:00",
     "function_checks": 13,
     "function_passed_checks": 13,
     "function_test_client": "operator_mac_public_https",
-    "current_function_status": "本次逐項重測通過"
+    "current_function_status": "本次逐項重測通過",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:02:07.750472+00:00"
   },
   {
     "name": "義大醫療財團法人義大醫院",
@@ -891,20 +1051,28 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": false,
     "function_tested_at": "2026-10-01T03:23:39.465578+00:00",
     "function_checks": 13,
     "function_passed_checks": 11,
     "function_test_client": "operator_mac_public_https",
-    "current_function_status": "本次外部逐項重測未通過；原因仍在定位"
+    "current_function_status": "本次外部逐項重測未通過；原因仍在定位",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T07:03:48.256274+00:00"
   },
   {
     "name": "彰化基督教醫療財團法人彰化基督教醫院",
@@ -934,19 +1102,27 @@
         "tui",
         "raw_clinical_note",
         "icd_codes",
-        "output_format"
+        "output_format",
+        "department",
+        "threshold"
       ],
       "output_formats": [
         "simple",
         "fhir"
       ],
-      "checked_at": "2026-10-01"
+      "checked_at": "2026-10-01",
+      "reserved_request_fields": [
+        "department",
+        "threshold"
+      ]
     },
     "function_contract_passed": true,
     "function_tested_at": "2026-10-01T03:25:30.375048+00:00",
     "function_checks": 13,
     "function_passed_checks": 13,
     "function_test_client": "formal_vm_public_https",
-    "current_function_status": "本次逐項重測通過"
+    "current_function_status": "本次逐項重測通過",
+    "reserved_parameters_passed": true,
+    "reserved_parameters_tested_at": "2026-10-01T06:59:48.621417+00:00"
   }
 ]

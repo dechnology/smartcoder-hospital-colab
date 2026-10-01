@@ -1,0 +1,1031 @@
+{
+  "parameters": {
+    "department": {
+      "type": "string",
+      "optional": true,
+      "nullable": true,
+      "affects_coding": false
+    },
+    "threshold": {
+      "type": "number",
+      "optional": true,
+      "nullable": true,
+      "affects_coding": false
+    }
+  },
+  "verification_scope": "formal_vm_public_https",
+  "hospitals": [
+    {
+      "hospital": "cgmhlnk",
+      "base_url": "https://smartcoderm.itri-nlp.tw/cgmhlnk",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:00:27.834672+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 204,
+          "passed": true
+        }
+      ],
+      "seconds": 8.873
+    },
+    {
+      "hospital": "csh",
+      "base_url": "https://smartcoderm.itri-nlp.tw/csh",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:00:36.731660+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 8.899
+    },
+    {
+      "hospital": "tpmmh",
+      "base_url": "https://smartcodern.itri-nlp.tw/tpmmh",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:03:11.543811+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 8.745
+    },
+    {
+      "hospital": "nckuh",
+      "base_url": "https://smartcoders.itri-nlp.tw/nckuh",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:04:45.375952+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 17.145
+    },
+    {
+      "hospital": "kmuh",
+      "base_url": "https://smartcoders.itri-nlp.tw/kmuh",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:04:37.040875+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 16.682
+    },
+    {
+      "hospital": "hlm",
+      "base_url": "https://smartcoders.itri-nlp.tw/hlm",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:03:58.124663+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 9.298
+    },
+    {
+      "hospital": "cmmc",
+      "base_url": "https://smartcoders.itri-nlp.tw/cmmc",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:04:28.807811+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 16.544
+    },
+    {
+      "hospital": "tcvgh",
+      "base_url": "https://smartcoderm.itri-nlp.tw/tcvgh",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:00:09.099864+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 204,
+          "passed": true
+        }
+      ],
+      "seconds": 8.902
+    },
+    {
+      "hospital": "ntuh",
+      "base_url": "https://smartcodern.itri-nlp.tw/ntuh",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:02:52.782235+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 10.376
+    },
+    {
+      "hospital": "tvgh",
+      "base_url": "https://smartcodern.itri-nlp.tw/tvgh",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:03:03.182466+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 8.88
+    },
+    {
+      "hospital": "yuanrung",
+      "base_url": "https://smartcoderm.itri-nlp.tw/yuanrung",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T06:59:48.620607+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 11.715
+    },
+    {
+      "hospital": "tph",
+      "base_url": "https://smartcodern.itri-nlp.tw/tph",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:03:01.464062+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 10.058
+    },
+    {
+      "hospital": "skh",
+      "base_url": "https://smartcodern.itri-nlp.tw/skh",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:02:43.778632+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 17.665
+    },
+    {
+      "hospital": "tsgh",
+      "base_url": "https://smartcodern.itri-nlp.tw/tsgh",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:02:35.024779+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 17.737
+    },
+    {
+      "hospital": "wfh",
+      "base_url": "https://smartcodern.itri-nlp.tw/wfh",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:02:25.630141+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 18.127
+    },
+    {
+      "hospital": "ksvgh",
+      "base_url": "https://smartcoders.itri-nlp.tw/ksvgh",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:03:48.255570+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 18.326
+    },
+    {
+      "hospital": "femh",
+      "base_url": "https://smartcodern.itri-nlp.tw/femh",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:02:16.841481+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 18.162
+    },
+    {
+      "hospital": "cmuh",
+      "base_url": "https://smartcoderm.itri-nlp.tw/cmuh",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:00:00.380308+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 9.46
+    },
+    {
+      "hospital": "ttch",
+      "base_url": "https://smartcodern.itri-nlp.tw/ttch",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:02:07.749893+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 17.859
+    },
+    {
+      "hospital": "cathay",
+      "base_url": "https://smartcodern.itri-nlp.tw/cathay",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:02:07.750472+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 9.07
+    },
+    {
+      "hospital": "edah",
+      "base_url": "https://smartcoders.itri-nlp.tw/edah",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T07:03:48.256274+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 9.845
+    },
+    {
+      "hospital": "cch",
+      "base_url": "https://smartcoderm.itri-nlp.tw/cch",
+      "client": "formal_vm_public_https",
+      "utc": "2026-10-01T06:59:48.621417+00:00",
+      "passed": true,
+      "threshold_did_not_filter": true,
+      "checks": [
+        {
+          "name": "health",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "omitted_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "null_fields_parse",
+          "http": 400,
+          "passed": true
+        },
+        {
+          "name": "threshold_type_validation",
+          "http": 422,
+          "passed": true
+        },
+        {
+          "name": "reserved_fields_coding",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "results_equal_and_cors",
+          "http": 200,
+          "passed": true
+        },
+        {
+          "name": "preflight",
+          "http": 200,
+          "passed": true
+        }
+      ],
+      "seconds": 11.738
+    }
+  ]
+}

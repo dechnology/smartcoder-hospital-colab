@@ -110,11 +110,13 @@ with test_case(name):
 | `output_format` | string | `simple` 回傳編碼 JSON；`fhir` 額外回傳 `fhir_bundle` |
 | `language` | string，可省略 | 輸入語言的紀錄資訊，例如 `zh-TW` |
 | `encounter_type` | string，可省略 | 就醫類型紀錄資訊 |
+| `department` | string，可省略或 null | 科別保留欄位，目前不影響編碼 |
+| `threshold` | number，可省略或 null | 數值保留欄位，目前不影響信心值或篩選 |
 | `SOAP` | string，可省略 | 區段標記，例如 `S`；不是病歷本文 |
 | `tui` | array[string]，可省略 | 限定語意類型，例如 `["T184"]`；表單用逗號分隔 |
 | `icd_codes` | array[object]，可省略 | 額外 ICD 證據；每項至少有 `code`，可加 `system`、`description` |
 
-空白的選填欄位不會送出。預設只送 `request_id`、`raw_clinical_note`、`output_format`。`icd_codes` 表單接受 JSON array；例如 `[{"code":"R07.9","system":"http://hl7.org/fhir/sid/icd-10-cm"}]`，需要本院已配置對應表。
+空白的選填欄位不會送出。預設只送 `request_id`、`raw_clinical_note`、`output_format`。`department` 可填科別文字；`threshold` 表單可填數值，例如 `0.5`，送出時轉為 JSON number。這兩個保留欄位目前不參與編碼、投票或篩選。`icd_codes` 表單接受 JSON array；例如 `[{"code":"R07.9","system":"http://hl7.org/fhir/sid/icd-10-cm"}]`，需要本院已配置對應表。
 
 ### 回應欄位
 
@@ -136,6 +138,8 @@ raw_clinical_note = "患者胸痛持續兩週，否認咳嗽。" #@param {type:"
 output_format = "simple" #@param ["simple", "fhir"]
 language = "" #@param {type:"string"}
 encounter_type = "" #@param {type:"string"}
+department = "" #@param {type:"string"}
+threshold = "" #@param {type:"string"}
 SOAP = "" #@param {type:"string"}
 tui_csv = "" #@param {type:"string"}
 icd_codes_json = "" #@param {type:"string"}
@@ -144,11 +148,16 @@ with test_case(name):
     require(bool(raw_clinical_note.strip()), "合成病歷不可空白")
     request_id = str(uuid4())
     coding_body = {"request_id": request_id, "raw_clinical_note": raw_clinical_note, "output_format": output_format}
-    for field, value in [("language", language), ("encounter_type", encounter_type), ("SOAP", SOAP)]:
+    for field, value in [("language", language), ("encounter_type", encounter_type), ("SOAP", SOAP), ("department", department)]:
         if value.strip():
             coding_body[field] = value.strip()
     if tui_csv.strip():
         coding_body["tui"] = [v.strip() for v in tui_csv.split(",") if v.strip()]
+    if threshold.strip():
+        try:
+            coding_body["threshold"] = float(threshold)
+        except ValueError:
+            raise RuntimeError("threshold 請填數值，例如 0.5；留白表示不送出") from None
     if icd_codes_json.strip():
         coding_body["icd_codes"] = json.loads(icd_codes_json)
         require(isinstance(coding_body["icd_codes"], list), "icd_codes 必須是 JSON array")
@@ -358,6 +367,12 @@ print("已移除金鑰變數並關閉連線。需要再測試時，請重跑初�
 金鑰由計畫窗口以私有管道提供；公開 notebook 沒有內建金鑰，也沒有儲存任何執行輸出。預設使用合成病例，請勿在本公開 Colab 輸入真實病歷或個資。自訂病例可驗證 API 格式；其編碼正確性須由專業人員覆核。
 
 ## 最新重測狀態（2026-10-01）
+
+### 新增保留參數
+
+22 院的編碼 POST 已接受選填 `department`（string）與 `threshold`（number）；可省略或傳 null。兩者目前不參與編碼、投票或篩選。各院 Colab 第 3 節已加入表單；`threshold` 留白不送出，填入數值時轉為 JSON number。
+
+22/22 院已由各自正式 VM→公開 HTTPS 驗證新欄位編碼、結果回查與 CORS；CSH 與員榮的新版 Colab 分別通過 14/14、15/15 項。此輪測試的來源是正式 VM。[新參數驗證紀錄](../../verification/reserved_parameters_20261001.json)。
 
 北、南區從 Mac 取用已發布 notebook 的程式進行完整逐項重測，16 院中 9 院通過、7 院未通過；部分 POST 在約 60–62 秒後連線中斷。中區六院在正式 VM 重測通過，尚不能當成中區外部完整驗收。下表標示每院的實際執行位置與結果。
 

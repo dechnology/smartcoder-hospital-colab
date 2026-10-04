@@ -300,7 +300,7 @@ with test_case(name):
     compatibility_body = {body}
     compatibility_response = request({method!r}, "{path}", body=compatibility_body)
     checked(compatibility_response, 200, name)
-    post_contract(compatibility_response.json(), compatibility_body["request_id"], compatibility_body, fixture=True)
+    result_contract(compatibility_response.json(), compatibility_body["request_id"], compatibility_body)
     show_json(compatibility_response)
 ''',tag)
                 continue

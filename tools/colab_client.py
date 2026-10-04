@@ -101,7 +101,7 @@ def result_contract(payload, request_id, body=None):
     require(metadata["snomed_version"] == "2026-07-01", "SNOMED CT 版本不符")
     require(metadata["pipeline_version"] == "api-version-0.1.0|txt_ner", "完整術語流程版本不符")
     require(type(metadata["vote_attempts"]) is int and metadata["vote_attempts"] == 3, "NER 投票輪數必須是 3")
-    require(metadata["confidence_method"] == "txt_ner_assertion_filtered_vote_support_min_2", "投票信心度方法不符")
+    require(metadata["confidence_method"] == "txt_ner_assertion_filtered_vote_support_min_1", "投票信心度方法不符")
     timestamp(metadata["timestamp"], "processing_metadata.timestamp")
     if known_body and body.get("tui"):
         require(payload["allowed_tui"] == body["tui"], "allowed_tui 與請求不同")

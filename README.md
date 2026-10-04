@@ -1,5 +1,7 @@
 # SmartCoder 22 院 API 介接與 Colab 測試手冊
 
+醫師版 API 仍執行三輪抽取；同一碼取得一票且通過病歷條件檢查即可回傳。投票 `confidence` 依支持輪數回傳 0.33、0.67 或 1.00，驗證工具使用 `txt_ner_assertion_filtered_vote_support_min_1`。
+
 供院方資訊室與 HIS 介接工程師使用。依院別開啟下表 Colab，先執行初始化與隱藏金鑰設定，再按各功能區塊的 ▶。也可選 Python 3／CPU →「執行階段 → 全部執行」。不需要 GPU。
 
 每本手冊包含參數表、POST／GET 呼叫程式、實際 HTTP 狀態與 JSON 顯示、FHIR 輸出、401／404／422 錯誤測試、Colab Origin 的 CORS 預檢，以及本次逐項測試總表。中山醫與員榮另有 NDJSON 串流測試；其餘院別不提供未支援的 stream 開關。各院 API 根網址固定於自己的 notebook。

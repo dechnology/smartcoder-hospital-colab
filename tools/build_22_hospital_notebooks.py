@@ -289,11 +289,21 @@ with test_case(name):
             ('no_key_get','GET 無金鑰','GET','/api/v1/snomed/results/" + str(uuid4()) + "',None,'authenticated=False','省略 X-API-Key，預期 HTTP 401。'),
             ('invalid_key','錯誤金鑰','GET','/api/v1/snomed/results/" + str(uuid4()) + "',None,'authenticated=False, headers={"X-API-Key": "invalid-test-token", "Origin": COLAB_ORIGIN}','使用明確無效的測試字串，預期 HTTP 401。'),
             ('missing_result','查無 request_id','GET','/api/v1/snomed/results/" + str(uuid4()) + "',None,'','使用本院有效金鑰與新的隨機 UUID，預期 HTTP 404。'),
-            ('unknown_field','不支援的欄位','POST','/api/v1/snomed/coding','{"request_id": str(uuid4()), "raw_clinical_note": RAW_NOTE, "output_format": "simple", "unknown_field": True}','','加入 unknown_field，預期 HTTP 422。'),
+            ('unknown_field','額外欄位相容','POST','/api/v1/snomed/coding','{"request_id": str(uuid4()), "raw_clinical_note": RAW_NOTE, "output_format": "simple", "unknown_field": True}','','額外欄位會被忽略，不改變編碼流程；有效病歷仍回 HTTP 200。'),
             ('invalid_format','錯誤 output_format','POST','/api/v1/snomed/coding','{"request_id": str(uuid4()), "raw_clinical_note": RAW_NOTE, "output_format": "invalid"}','','設定無效列舉值，預期 HTTP 422。')]:
-            status=404 if tag=='missing_result' else (422 if tag in ['unknown_field','invalid_format'] else 401)
+            status=404 if tag=='missing_result' else (422 if tag=='invalid_format' else (200 if tag=='unknown_field' else 401))
             md('### '+name+'\n\n'+description)
             args=(f', body={body}' if body else '') + (', '+kwargs if kwargs else '')
+            if tag=='unknown_field':
+                code(f'''name = {name!r}
+with test_case(name):
+    compatibility_body = {body}
+    compatibility_response = request({method!r}, "{path}", body=compatibility_body)
+    checked(compatibility_response, 200, name)
+    post_contract(compatibility_response.json(), compatibility_body["request_id"], compatibility_body, fixture=True)
+    show_json(compatibility_response)
+''',tag)
+                continue
             code(f'''name = {name!r}
 with test_case(name):
     error_response = request({method!r}, "{path}"{args})
